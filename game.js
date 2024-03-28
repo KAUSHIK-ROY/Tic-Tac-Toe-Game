@@ -21,10 +21,9 @@ boxes.forEach((box) => {
         }
         box.disabled = true;
 
-        checkWinner();
+        checkWinner(); 
     });
 });
-
 
 
 const diasbleBox = () => {
