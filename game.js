@@ -22,7 +22,7 @@ boxes.forEach((box) => {
         box.disabled = true;
 
         checkWinner(); 
-    });
+    })
 });
 
 
@@ -30,7 +30,7 @@ const diasbleBox = () => {
     for (let box of boxes){
         box.disabled = true;
     }
-}
+};
 
 
 const anableBox =() => {
@@ -38,7 +38,7 @@ const anableBox =() => {
         box.disabled = false;
         box.innerText = "";
     }
-}
+};
 
 const checkWinner = () => {
     for(let pattern of combination){
@@ -54,7 +54,7 @@ const checkWinner = () => {
             }
         }
     }
-}
+};
 
 
 
@@ -72,7 +72,9 @@ new_btn.addEventListener("click", () => {
 
 let theme = "light" ;
 theme_btn.addEventListener("click", () =>{
-    function change(){
+
+    if( theme === "light"){
+        theme = "dark";
         document.body.style.background = "rgb(25, 25, 25)";
         document.querySelector("h1").style.color = "cyan";
         document.querySelector("h1").style.textShadow = "0 0 5px #fe01b1, 0 0 25px #fe01b1, 0 0 05px #fe01b1, 0 0 75px #fe01b1";
@@ -85,26 +87,39 @@ theme_btn.addEventListener("click", () =>{
 
         document.querySelector(".new-btn").style.color = "cyan";
         document.querySelector(".new-btn").style.boxShadow = "0 0 15px #fe01b1";
-        document.querySelector("#msg").style.color = "red"
+        document.querySelector("#msg").style.color = "red";
 
 
-        boxes.forEach(function(ele){       //for multiple classes always use foeEach functions
+        boxes.forEach(function(ele){       //for multiple classes always use forEach functions
             ele.style.background = "white";
             ele.style.color = "red";
             ele.style.textShadow = "0 0 5px #fe01b1,  0 0 25px #fe01b1"; 
             ele.style.boxShadow = "0 0 5px #fe01b1, 0 0 25px #fe01b1, 0 0 05px #fe01b1";
-        });
-    };
-    function previous(){
-        document.body.background = "yellow";
-    }
-    if( theme === "light"){
-        theme = "dark"
-        change();
+        })
     }
     else{
         theme = "light";
-        previous();
+
+        document.body.style.background = "";
+        document.querySelector("h1").style.color = "";
+        document.querySelector("h1").style.textShadow = "";
+        document.querySelector("#reset-btn").style.color = "";
+        document.querySelector("#reset-btn").style.boxShadow = "";
+        document.querySelector("h2").style.color = "";
+        document.querySelector("h2").style.textShadow = "";
+        document.querySelector(".container").style.background = "";
+        document.querySelector(".show").style.background = "";
+
+        document.querySelector(".new-btn").style.color = "";
+        document.querySelector(".new-btn").style.boxShadow = "";
+        document.querySelector("#msg").style.color = "";
+
+
+        boxes.forEach(function(ele){       //for multiple classes always use foeEach functions
+            ele.style.background = "rgb(255, 194, 247)";
+            ele.style.color = "red";
+            ele.style.textShadow = "0 0 5px #fe01b1,  0 0 25px #fe01b1"; 
+            ele.style.boxShadow = "0px 0px 15px rgba(0, 0, 0, 0.447)";
+        })   
     }
-    console.log(theme);
 });

@@ -6,7 +6,7 @@
 
 
 body{
-    background: rgb(255, 37, 182);
+    background: rgb(255, 69, 193);
     text-align: center;
 }
 
@@ -16,6 +16,7 @@ h1{
     display: flex;
     justify-content: center;
     text-decoration: underline;
+    font-size: 7.5vmin;
     text-underline-offset:calc(10px);
 }
 
@@ -51,7 +52,8 @@ h2{
     border-radius: 10rem;
     /* color: blue; */
     background: rgb(255, 0, 225);
-    box-shadow: inset 0px 5px 10px rgba(0,0,0,0.4), inset 0px -5px 10px rgba(225,225,225,0.4);
+    box-shadow: inset 0px 3px 5px rgba(0,0,0,0.4), inset 0px -3px 5px rgba(225,225,225,0.4);
+    cursor: pointer;
 }
 
 .switch::after{
@@ -82,7 +84,7 @@ h2{
 }
 
 .container{
-    height:70vh;
+    height:69vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,9 +111,10 @@ h2{
     border-radius: 1rem;
     font-size: 8vmin;
     cursor: pointer;
-    background: rgb(255, 113, 182);
-    color: black;
-    box-shadow: 0px 0px 15px black;
+    background: rgb(255, 194, 247);
+    color: red;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.447);
+    text-shadow: 0 0 5px #fe01b1,  0 0 25px #fe01b1;
 }
 
 
@@ -124,6 +127,7 @@ h2{
     color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
+    
 }
 
 
